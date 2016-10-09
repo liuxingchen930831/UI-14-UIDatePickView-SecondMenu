@@ -64,10 +64,12 @@
     NSString *dateString = [fmt stringFromDate:self.datePicker.date];
     self.SRLabel.text = dateString;
 }
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//是否允许输入字符串
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)strin
 {
     return NO;
 }
+//开始编辑
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if ( textField==self.SRLabel) {
